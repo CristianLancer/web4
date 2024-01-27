@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Sistema de Comentarios</h2>
+
+<div id="comentarios"></div>
+
+<h3>Añadir un Comentario</h3>
+<input type="text" id="nombre" placeholder="Nombre"><br>
+<textarea id="comentario" placeholder="Comentario"></textarea><br>
+<button onclick="añadirComentario()">Enviar</button>
+
+<script>
+var comentarios = [];
+
+function añadirComentario() {
+    var nombre = document.getElementById("nombre").value;
+    var comentario = document.getElementById("comentario").value;
+    
+    comentarios.push({nombre: nombre, comentario: comentario});
+    
+    mostrarComentarios();
+}
+
+function mostrarComentarios() {
+    var comentariosDiv = document.getElementById("comentarios");
+    comentariosDiv.innerHTML = '';
+    
+    for (var i = 0; i < comentarios.length; i++) {
+        comentariosDiv.innerHTML += '<p><b>' + comentarios[i].nombre + '</b>: ' + comentarios[i].comentario + '</p>';
+    }
+}
+</script>
+
+</body>
+</html>
