@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat entre Personas</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .chat-container {
+            max-width: 600px;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .message {
+            display: flex;
+            margin: 10px;
+        }
+
+        .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .left .avatar {
+            background-color: #3498db; /* Color para el avatar de la persona izquierda */
+        }
+
+        .right .avatar {
+            background-color: #e74c3c; /* Color para el avatar de la persona derecha */
+        }
+
+        .text-container {
+            max-width: 70%;
+        }
+
+        .name {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .date {
+            font-size: 0.8em;
+            color: #888;
+        }
+
+        .message-text {
+            font-size: 1em;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="message left">
+            <img src="avatar_persona1.jpg" alt="Avatar Persona 1" class="avatar">
+            <div class="text-container">
+                <div class="name">Persona 1</div>
+                <div class="date">Fecha: 01/02/2024</div>
+                <div class="message-text">Hola, ¿cómo estás?</div>
+            </div>
+        </div>
+
+        <div class="message right">
+            <img src="avatar_persona2.jpg" alt="Avatar Persona 2" class="avatar">
+            <div class="text-container">
+                <div class="name">Persona 2</div>
+                <div class="date">Fecha: 02/02/2024</div>
+                <div class="message-text">¡Hola! Estoy bien, gracias. ¿Y tú?</div>
+            </div>
+        </div>
+
+        
+    </div>
+</body>
+</html>
